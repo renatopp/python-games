@@ -198,7 +198,7 @@ class GameLayer(cocos.layer.Layer):
         self.ableToPlay = False
 
         # Definição dos efeitos
-        blink = actions.Blink(10, 2)
+        blink = actions.Blink(10, 1.5)
         fade = actions.FadeOut(1)
 
         for i in xrange(9):
@@ -210,7 +210,7 @@ class GameLayer(cocos.layer.Layer):
                 self.sprites[i].do(fade)
 
         # Define um atraso de 2 segundos pro jogo reiniciar
-        self.do(actions.Delay(2) + actions.CallFunc(self.newGame))
+        self.do(actions.Delay(1.5) + actions.CallFunc(self.newGame))
 
     def __onTie(self):
         u"""
